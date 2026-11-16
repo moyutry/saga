@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="theme-color" content="#07060b" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="description" content="Saga — every story, in order. Your watchlist, universes in chronological order, planner and stats." />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Saga" />
+    <meta property="og:title" content="Saga" />
+    <meta property="og:description" content="Every story, in order." />
+    <meta property="og:image" content="./pwa-512x512.png" />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon-180x180.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./splash/launch-1320x2868.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./splash/launch-1290x2796.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./splash/launch-1206x2622.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./splash/launch-1179x2556.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./splash/launch-1170x2532.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./splash/launch-1284x2778.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./splash/launch-1125x2436.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./splash/launch-1242x2688.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./splash/launch-828x1792.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./splash/launch-750x1334.png" />
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./splash/launch-1242x2208.png" />
+    <title>Saga</title>
+    <script>
+      // Apply saved language/theme before first paint (no flash).
+      try {
+        var b = JSON.parse(localStorage.getItem('velvet.boot') || '{}');
+        var lang = b.lang === 'en' ? 'en' : 'he';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        document.documentElement.dataset.theme = b.theme || 'dark';
+        if (b.accent) document.documentElement.style.setProperty('--accent', b.accent);
+        if (b.accent2) document.documentElement.style.setProperty('--accent-2', b.accent2);
+      } catch (e) {}
+      if (/^#\/(subs|player)/.test(location.hash)) document.documentElement.classList.add('aux-window');
+      if (/^#\/subs/.test(location.hash)) document.documentElement.classList.add('subs-window');
+    </script>
+    <style>html,body{background:#07060b;margin:0}html[data-theme=light],html[data-theme=light] body{background:#f6f4f1}#boot{z-index:999;place-items:center;transition:opacity .35s;display:grid;position:fixed;inset:0}#boot img{border-radius:22px;width:84px;height:84px;animation:1.6s ease-in-out infinite bootpulse;box-shadow:0 20px 60px -20px #ff3d7f}@keyframes bootpulse{50%{opacity:.8;transform:scale(.94)}}html.aux-window #boot{display:none}html.subs-window,html.subs-window body{background:0 0!important}</style>
+    <script type="module" crossorigin src="./assets/index-BiOiP_sp.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/settings-DLQ_C4y3.js">
+    <link rel="modulepreload" crossorigin href="./assets/plus-DlKetOU_.js">
+    <link rel="modulepreload" crossorigin href="./assets/i18n-f-SVC1Au.js">
+    <link rel="modulepreload" crossorigin href="./assets/actions-Be76ERI_.js">
+    <link rel="modulepreload" crossorigin href="./assets/ui-C9oHpetu.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-D-t8kcEG.css">
+  <link rel="manifest" href="./manifest.webmanifest"></head>
+  <body>
+    <div id="boot"><img src="./logo.svg" alt="" /></div>
+    <div id="root"></div>
+  </body>
+</html>
